@@ -15,7 +15,7 @@ export default function Navbar() {
         <h1 className="text-2xl font-extrabold text-gray-900">Linkly</h1>
       </div>
       <a
-        href="https://github.com/your-username"
+        href="https://github.com/0x-mayank/Linkly"
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-700 hover:text-black transition"
