@@ -6,7 +6,7 @@ export default function HeroSection() {
   const [shortUrl, setShortUrl] = useState("");
 
   const handleSubmit = () => {
-    axios.post('http://localhost:3000/api/short',{originalUrl})
+    axios.post('https://linkly-backend-r1cb.onrender.com/',{originalUrl})
       .then((res)=>{
         setShortUrl(res.data);
         console.log("Api Response", res.data)
