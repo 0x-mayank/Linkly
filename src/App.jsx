@@ -3,6 +3,7 @@ import React from 'react';
 import NavBar from '../components/NavBar';
 import HeroSection from '../components/HeroSection';
 import About from '../components/About';
+import { Analytics } from '@vercel/analytics/next';
 
 function App() {
   
@@ -24,7 +25,7 @@ function App() {
     <NavBar />
     <HeroSection />
     <About/>
-
+    <Analytics />
   </div>
 
 </div>
