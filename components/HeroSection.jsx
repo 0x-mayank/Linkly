@@ -48,7 +48,7 @@ export default function HeroSection() {
             <p className="text-sm font-semibold text-gray-500">
               YOUR SHORTENED URL
             </p>
-            <div className="flex items-center justify-center mt-2">
+            <div className="flex items-center justify-between mt-2 w-1/2 mx-auto">
               <a href= {`https://linkly-backend-r1cb.onrender.com/${shortUrl.url.shortUrl}`}
               rel="noopener noreferrer"
               target="_blank"
@@ -56,6 +56,20 @@ export default function HeroSection() {
               >
               {`link.ly/${shortUrl?.url.shortUrl}`}
               </a>
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(`https://linkly-backend-r1cb.onrender.com/${shortUrl.url.shortUrl}`);
+                const btn = document.getElementById("copyBtn");
+                btn.classList.add("scale-110", "bg-green-400");
+                setTimeout(() => {
+                  btn.classList.remove("scale-110", "bg-green-400");
+                }, 500);
+              }}
+              id="copyBtn"
+              className="px-2 py-1 rounded-md bg-gray-200 text-sm transition-transform duration-300"
+            >
+            Copy
+            </button>
             </div>
           </div>
         )}
